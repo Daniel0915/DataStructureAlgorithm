@@ -316,4 +316,26 @@ public class BinarySearchTreeImpl implements BinarySearchTree {
             return root;
         }
     }
+
+    @Override
+    public void traversePreOrderRecursive(final Node node) {
+        if (node == null) {
+            return;
+        }
+
+        System.out.println(node.data);
+        traversePreOrderRecursive(node.left);
+        traversePreOrderRecursive(node.right);
+    }
+
+    @Override
+    public void traverseSucOrderRecursive(final Node node) {
+        if (node == null) {
+            return;
+        }
+
+        traverseSucOrderRecursive(node.left);
+        traverseSucOrderRecursive(node.right);
+        System.out.println(node.data);
+    }
 }

@@ -45,4 +45,10 @@ public interface BinarySearchTree {
 
     // 노드 삭제
     Node deleteNode(final Node root, final int data);
+
+    // 재귀 전위 순회
+    void traversePreOrderRecursive(final Node node);
+
+    // 재귀 후위 순회
+    void traverseSucOrderRecursive(final Node node);
 }

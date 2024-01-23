@@ -7,30 +7,21 @@ public class Program {
     public static void main(String[] args) {
         BinarySearchTree binarySearchTree = new BinarySearchTreeImpl();
 
-        Node node = new Node(6);
+        Node node = new Node(50);
 
         // 삽입
-        binarySearchTree.insertRecursive(node, 4);
-        binarySearchTree.insertRecursive(node, 2);
-        binarySearchTree.insertRecursive(node, 10);
+        binarySearchTree.insertRecursive(node, 30);
+        binarySearchTree.insertRecursive(node, 24);
+        binarySearchTree.insertRecursive(node, 5);
+        binarySearchTree.insertRecursive(node, 28);
+        binarySearchTree.insertRecursive(node, 45);
+        binarySearchTree.insertRecursive(node, 98);
+        binarySearchTree.insertRecursive(node, 52);
+        binarySearchTree.insertRecursive(node, 60);
 
-        // 중위 순회(오름차순)
-        binarySearchTree.traverseInOrderRecursive(node);
-        System.out.println();
-        // 중위 순회(내림차순)
-        binarySearchTree.traverseInOrderRecursiveDesc(node);
-        System.out.println();
+//        binarySearchTree.traversePreOrderRecursive(node);
 
-
-        binarySearchTree.traverseInOrder(node);
-        System.out.println();
-
-        binarySearchTree.traverseInOrderDesc(node);
-        System.out.println();
-
-        System.out.println(binarySearchTree.findParentNodeOrNullRecursive(node, 6).data);
-
-
+        binarySearchTree.traverseSucOrderRecursive(node);
     }
 
 }
